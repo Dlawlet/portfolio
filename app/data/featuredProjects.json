@@ -1,0 +1,41 @@
+[
+	{
+		"title": "Personal Portfolio Website",
+		"description": "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
+		"context": "Showcase development skills and projects to potential employers and clients.",
+		"actions": [
+			"Designed UI/UX wireframes",
+			"Developed reusable React components",
+			"Integrated contact form with email service",
+			"Deployed on Vercel"
+		],
+		"results": "Increased online visibility and received positive feedback from recruiters.",
+		"galerie": [
+			"/code.jpg",
+			"/laptop.jpg"
+		],
+		"link": "https://myportfolio.com",
+		"start_date": "2024-01-10",
+		"end_date": "2024-02-15",
+		"tags": ["Next.js", "Tailwind CSS", "React", "Portfolio"]
+	},
+	{
+		"title": "E-commerce Store",
+		"description": "A scalable e-commerce platform with payment integration.",
+		"context": "Created for a local business to expand online sales.",
+		"actions": [
+			"Set up product catalog and shopping cart",
+			"Integrated Stripe for payments",
+			"Optimized SEO and performance",
+			"Configured CI/CD pipeline"
+		],
+		"results": "Boosted sales by 40% in the first quarter after launch.",
+		"galerie": [
+			"/laptop.jpg"
+		],
+		"link": "https://shoplocal.com",
+		"start_date": "2024-03-05",
+		"end_date": "2024-05-10",
+		"tags": ["E-commerce", "Stripe", "SEO", "CI/CD"]
+	}
+]
