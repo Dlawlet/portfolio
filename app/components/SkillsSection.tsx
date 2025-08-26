@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { s } from "framer-motion/client";
 
 const skills_softwareDev = [
   { skill: "Java", level: 40 },

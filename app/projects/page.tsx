@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ProjectDetails from "../components/ProjectDetails";

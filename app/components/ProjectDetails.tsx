@@ -27,10 +27,8 @@ export default function ProjectDetails({
   project,
   onClose,
 }: ProjectDetailsProps) {
-  if (!project) return null;
-  const [imgSrc, setImgSrc] = useState(project.galerie[0] || "/code.jpg");
+  const [imgSrc, setImgSrc] = useState<string>(project?.galerie?.[0] || "/code.jpg");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setLightboxIndex(null);
@@ -49,7 +47,8 @@ export default function ProjectDetails({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [lightboxIndex, project.galerie.length]);
+  }, [lightboxIndex, project]);
+  if (!project) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm">
       <motion.div
