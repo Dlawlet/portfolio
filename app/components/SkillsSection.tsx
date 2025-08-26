@@ -1,39 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { s } from "framer-motion/client";
 
 const skills_softwareDev = [
-  { skill: "Java", level: 90 },
-  { skill: "JavaScript", level: 85 },
-  { skill: "C++", level: 80 },
-  { skill: "Ruby", level: 75 },
-  { skill: "Go", level: 70 },
+  { skill: "Java", level: 40 },
+  { skill: "JavaScript", level: 50 },
+  { skill: "C++", level: 40 },
+  { skill: "Kotlin", level: 50 },
 ];
 const skills_dataML = [
-  { skill: "Python", level: 90 },
+  { skill: "Python", level: 85 },
   { skill: "Pandas", level: 85 },
   { skill: "NumPy", level: 90 },
-  { skill: "TensorFlow", level: 80 },
-  { skill: "Machine Learning", level: 85 },
-  { skill: "Data Visualization", level: 80 },
+  { skill: "Scikit-Learn", level: 80 },
+  { skill: "Matplotlib", level: 80 },
+  { skill: "Seaborn", level: 75 },
+  { skill: "SQL", level: 70 },
+  { skill: "NoSQL", level: 65 },
+  { skill: "Data Visualization", level: 75 },
+  { skill: "Data Cleaning", level: 80 },
+  { skill: "Data Analysis", level: 80 },
+  { skill: "TensorFlow", level: 70 },
+  { skill: "Machine Learning", level: 75 },
 ];
 
 const skills_DevOps = [
-  { skill: "Docker", level: 85 },
-  { skill: "Kubernetes", level: 80 },
-  { skill: "CI/CD", level: 90 },
-  { skill: "AWS", level: 80 },
-  { skill: "Linux", level: 85 },
-  { skill: "Monitoring", level: 80 },
+  { skill: "Docker", level: 75 },
+  { skill: "CI/CD", level: 75 },
+  { skill: "AWS", level: 65 },
+  { skill: "Linux", level: 80 },
+  { skill: "Airflow", level: 75 },
+  { skill: "Terraform", level: 70 },
+  { skill: "PostgreSQL", level: 70 },
+  { skill: "MongoDB", level: 65 },
 ];
 
 const skills_WebDev = [
   { skill: "HTML", level: 95 },
   { skill: "CSS", level: 90 },
-  { skill: "JavaScript", level: 85 },
-  { skill: "React", level: 90 },
-  { skill: "Next.js", level: 80 },
-  { skill: "Responsive Design", level: 85 },
+  { skill: "JavaScript", level: 50 },
+  { skill: "React", level: 50 },
+  { skill: "Next.js", level: 50 },
+  { skill: "Responsive Design", level: 65 },
+  { skill: "TypeScript", level: 50 },
 ];
 
 const Annex = [

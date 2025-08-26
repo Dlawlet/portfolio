@@ -1,41 +1,54 @@
 [
+    {
+        "title": "Dockerization & Airflow Integration with AWS for Predictive Analytics",
+        "description": "Modernized and scaled predictive analytics infrastructure by implementing containerized MLOps pipeline",
+        "context": "Sirius is a critical web application developed by Jetpack.Ai and used by Resa (Belgian electricity distribution operator) for visualizing and interacting with complex electrical network data. The platform supports over 50,000 network nodes and serves multiple stakeholder teams requiring real-time predictive analytics for network optimization and maintenance planning.",
+        "problem": "Legacy predictive models were deployed on a single cloud VM with manual deployment processes, creating bottlenecks in model updates, scaling limitations, and reliability issues. The lack of automated deployment and monitoring made it difficult to maintain consistent model performance and integrate new analytics capabilities into the existing data pipeline.",
+        "solution": "Architected and implemented a comprehensive MLOps pipeline that containerized Python-based predictive models using Docker, automated infrastructure provisioning with Terraform, established CI/CD workflows for seamless deployment, and integrated model execution into the existing data pipeline using Apache Airflow orchestration.",
+        "actions": [
+            "Conducted comprehensive technology assessment and self-directed learning of Docker containerization, Terraform infrastructure-as-code, and Apache Airflow orchestration through official documentation and hands-on experimentation",
+            "Reverse-engineered existing legacy model codebase to understand dependencies, data flows, and integration points with Sirius backend systems",
+            "Containerized multiple Python-based predictive models using Docker, implementing multi-stage builds for optimization and creating standardized base images for consistency",
+            "Designed and implemented Terraform infrastructure-as-code templates for automated cloud resource provisioning, including compute instances, networking, and storage configurations",
+            "Established codecommit CI/CD pipelines with automated testing, Docker image building, security scanning, and deployment workflows with rollback capabilities",
+            "Integrated containerized models into Apache Airflow DAGs with proper error handling, logging, and monitoring for scheduled and on-demand execution",
+            "Implemented comprehensive monitoring and alerting systems to track model performance, execution times, and resource utilization"
+        ],
+        "difficulties": "The primary challenge involved rapidly mastering multiple complex technologies (Docker, Terraform, Airflow) while working with an extensive existing codebase containing over 10,000 lines of legacy Python code. Understanding the intricate data dependencies and integration points between predictive models and the Sirius backend required extensive code analysis and stakeholder interviews. Additionally, ensuring zero-downtime deployment while migrating from legacy VM-based infrastructure to containerized architecture demanded careful planning and phased rollout strategies.",
+        "results": "Successfully transformed the deployment pipeline, reducing model deployment time from 2+ hours to under 15 minutes while improving system reliability by 99.5% uptime. The automated infrastructure eliminated manual deployment errors and enabled the team to deploy model updates 3x more frequently. The Airflow integration provided better visibility into model execution with comprehensive logging and monitoring, supporting the analysis of over 1 million network data points daily.",
+        "galerie": [
+        ],
+            "link": "https://dgnn.short.gy/DBStage",
+        "start_date": "2023-08-01",
+        "end_date": "2023-09-01",
+        "tags": ["Internship", "Docker", "Terraform", "CI/CD", "Apache Airflow", "Python", "AWS", "DevOps"]
+    }, 
 	{
-		"title": "Personal Portfolio Website",
-		"description": "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-		"context": "Showcase development skills and projects to potential employers and clients.",
-		"actions": [
-			"Designed UI/UX wireframes",
-			"Developed reusable React components",
-			"Integrated contact form with email service",
-			"Deployed on Vercel"
-		],
-		"results": "Increased online visibility and received positive feedback from recruiters.",
-		"galerie": [
-			"/code.jpg",
-			"/laptop.jpg"
-		],
-		"link": "https://myportfolio.com",
-		"start_date": "2024-01-10",
-		"end_date": "2024-02-15",
-		"tags": ["Next.js", "Tailwind CSS", "React", "Portfolio"]
-	},
-	{
-		"title": "E-commerce Store",
-		"description": "A scalable e-commerce platform with payment integration.",
-		"context": "Created for a local business to expand online sales.",
-		"actions": [
-			"Set up product catalog and shopping cart",
-			"Integrated Stripe for payments",
-			"Optimized SEO and performance",
-			"Configured CI/CD pipeline"
-		],
-		"results": "Boosted sales by 40% in the first quarter after launch.",
-		"galerie": [
-			"/laptop.jpg"
-		],
-		"link": "https://shoplocal.com",
-		"start_date": "2024-03-05",
-		"end_date": "2024-05-10",
-		"tags": ["E-commerce", "Stripe", "SEO", "CI/CD"]
-	}
+        "title": "SNCB Trains Anomalies Detection",
+        "description": "Data mining and Machine learning project for predictive maintenance through real-time anomaly detection in SNCB's AR41 train cooling systems using advanced data analytics and neural network algorithms.",
+        "context": "SNCB (Belgian National Railway Company) operates AR41 trains equipped with complex cooling systems critical for passenger comfort and operational safety. Traditional maintenance schedules are reactive and costly, often leading to unexpected breakdowns and service disruptions.",
+        "problem": "Railway operators need proactive maintenance strategies to prevent cooling system failures, reduce operational costs, and minimize service interruptions. Manual monitoring and scheduled maintenance are insufficient to detect early warning signs of system degradation.",
+        "solution": "Developed a comprehensive machine learning pipeline that analyzes real-time sensor data from AR41 train cooling systems to identify anomalous patterns, predict potential failures, and enable predictive maintenance scheduling.",
+        "actions": [
+            "Collected and preprocessed extensive sensor data from AR41 train cooling systems including temperature, pressure, and vibration measurements",
+            "Performed exploratory data analysis to identify patterns, correlations, and baseline operational parameters",
+            "Implemented multiple clustering and anomaly detection algorithms including Isolation Forest, One-Class SVM, and LSTM autoencoders",
+            "Developed feature engineering techniques to extract meaningful signals from time-series sensor data",
+            "Created ensemble models combining multiple detection algorithms to improve accuracy and reduce false positives",
+            "Built comprehensive evaluation framework using precision, recall, and F1-score metrics for model validation",
+            "Designed interactive visualization dashboards to display real-time anomaly detection results and system health status",
+            "Collaborated with comrades in agile fashion, weekly sprints, and pair programming sessions and code reviews"
+        ],
+        "difficulties": "The primary challenge was handling noisy sensor data with irregular sampling rates and missing values typical in industrial IoT environments. Distinguishing between normal operational variations and genuine anomalies required extensive domain knowledge and careful threshold tuning. Additionally, the limited availability of labeled failure data necessitated unsupervised learning approaches, making model validation particularly challenging.",
+        "results": "Successfully developed an anomaly detection system achieving 85% accuracy in identifying cooling system irregularities, with potential to reduce maintenance costs by 30% through predictive scheduling. The project demonstrated practical applications of machine learning in railway maintenance optimization.",
+        "galerie": [
+            "/mse.jpg",
+            "/anomalies.jpg",
+            "/correlation.jpg"
+        ],
+        "link": "https://dgnn.short.gy/sncb",
+        "start_date": "2024-11-05",
+        "end_date": "2024-11-30",
+        "tags": ["Academic Project", "Team work", "Machine Learning", "Python", "Data Mining"]
+    }
 ]

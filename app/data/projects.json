@@ -1,60 +1,333 @@
 [
 	{
-		"title": "Personal Portfolio Website",
-		"description": "A modern, responsive portfolio website built with Next.js and Tailwind CSS.",
-		"context": "Showcase development skills and projects to potential employers and clients.",
-		"actions": [
-			"Designed UI/UX wireframes",
-			"Developed reusable React components",
-			"Integrated contact form with email service",
-			"Deployed on Vercel"
+		"title": "Bigrooms",
+		"description": "Website to display Bigscreen Beta VR current rooms and their details.",
+		"context": "Bigscreen Beta VR is a wonderful virtual reality platform that allows users to create and explore immersive environments. The app emphasizes Movie and TV show streaming in high-quality virtual reality theaters. Users can host and join rooms to watch movies, chat, listen to music, and more.",
+        "problem": "Users need a way to view current rooms and their details without wearing their VR headsets or launching the VR app.",
+        "solution": "Developed a web application that displays current rooms and their details scrapped from the ram of a dedicated PC since Bigscreen does not provide any sort of public API.",
+        "actions": [
+            "Configured a dedicated PC to run the Bigscreen app and act as a data collection server",
+            "Reverse-engineered the Bigscreen app's memory structure using Cheat Engine to identify room data patterns",
+            "Developed a robust PowerShell script with C# integration to scrape real-time room data every 500ms and persist to JSON",
+            "Built a RESTful API server using Node.js to expose the scraped data with proper error handling and rate limiting",
+            "Implemented secure remote access using Cloudflare Tunnel to expose the local server without port forwarding",
+            "Created a responsive frontend using Next.js with real-time data fetching, search functionality, and room filtering",
+            "Deployed the application on Vercel with automatic CI/CD pipeline and environment-specific configurations"
 		],
-		"results": "Increased online visibility and received positive feedback from recruiters.",
+        "difficulties": "The main challenge was reverse-engineering the Bigscreen app's memory structure to accurately identify and extract room data. The abscence of a refence API recoired to test multiple approach (packet analysis with wireshark, static analysis with dnSpy) and use of memory scanning tools and a deep understanding of how the app manages its data in real-time. Additionally, ensuring the PowerShell script ran efficiently without impacting the performance of the dedicated PC was crucial.",
+		"results": "The initiative received positive feedback from users, with an average of 15% of daily users of the Bigscreen app utilizing the web application daily to check rooms.",
 		"galerie": [
-			"/code.jpg",
-			"/laptop.jpg"
+			"/bigscreen_layout.jpg",
+            "/bigscreen_feedback.jpg"
 		],
-		"link": "https://myportfolio.com",
-		"start_date": "2024-01-10",
-		"end_date": "2024-02-15",
-		"tags": ["Next.js", "Tailwind CSS", "React", "Portfolio"]
+		"link": "https://bigrooms.vercel.app/",
+		"start_date": "2025-03-15",
+		"end_date": "2025-03-30",
+		"tags": ["Personal Project","Next.js", "React", "windows PowerShell", "tailwind CSS", "Server", "API", "Node.js", "CI/CD", "wireshark"]
 	},
 	{
-		"title": "Task Manager App",
-		"description": "A full-stack task management application for teams.",
-		"context": "Built to streamline team collaboration and task tracking.",
-		"actions": [
-			"Developed REST API with Node.js and Express",
-			"Implemented authentication and authorization",
-			"Created interactive dashboard with charts",
-			"Wrote unit and integration tests"
-		],
-		"results": "Improved team productivity and reduced missed deadlines.",
+		"title": "Anzi",
+        "description": "Web application for intuitive address management and geolocation in African cities where traditional addressing systems are limited.",
+        "context": "In most African cities, property localization relies heavily on nearby landmarks and verbal directions rather than standardized street addressing systems. This creates challenges for deliveries, emergency services, and general navigation.",
+        "problem": "Users need a simple way to register, manage, and share precise geographic locations in a format that is both intuitive and compatible with existing mapping systems, enabling more accurate deliveries and improved location sharing.",
+        "solution": "Developed a user-friendly web application that simplifies address management by allowing users to register geographic coordinates through an interactive map interface, automatically generating formatted addresses with street names and providing shareable location data.",
+        "actions": [
+            "Designed and implemented an intuitive user interface using Next.js based on modern templates",
+            "Created custom branding and logo design using Adobe Illustrator to establish visual identity",
+            "Integrated OpenStreetMap API to provide interactive mapping functionality with precise geolocation capabilities",
+            "Architected a scalable database schema for users and addresses using MongoDB Atlas for cloud storage",
+            "Implemented real-time coordinate capture and reverse geocoding to generate human-readable addresses",
+            "Built responsive design ensuring compatibility across desktop and mobile devices",
+            "Deployed the application on Vercel with automated CI/CD pipeline and environment management"
+        ],
+        "difficulties": "The primary technical challenge involved implementing precise geolocation capture and reverse geocoding to convert coordinates into user-friendly address formats. Ensuring data accuracy and handling edge cases in areas with limited mapping data required extensive testing. From a business perspective, expanding user adoption beyond immediate networks proved challenging and highlighted the need for improved marketing and user acquisition strategies.",
+        "results": "Successfully deployed a functional address management system that demonstrated the viability of simplified geolocation tools for African urban contexts, providing a foundation for future development and potential commercial applications.",
 		"galerie": [
-			"/grid.svg"
+			"/anzi_layout.jpg",
+            "/anzi_map.jpg"
+			
 		],
-		"link": "https://taskmanagerapp.com",
-		"start_date": "2023-09-01",
-		"end_date": "2023-11-20",
-		"tags": ["Node.js", "Express", "React", "Teamwork"]
+            "link": "https://anzi-cmr.vercel.app/",
+            "start_date": "2023-07-01",
+		"end_date": "2023-07-30",
+		"tags": ["Personal Project", "Next.js", "React", "open street map", "API", "Mongodb","Geolocation"]
 	},
 	{
-		"title": "E-commerce Store",
-		"description": "A scalable e-commerce platform with payment integration.",
-		"context": "Created for a local business to expand online sales.",
-		"actions": [
-			"Set up product catalog and shopping cart",
-			"Integrated Stripe for payments",
-			"Optimized SEO and performance",
-			"Configured CI/CD pipeline"
-		],
-		"results": "Boosted sales by 40% in the first quarter after launch.",
-		"galerie": [
-			"/laptop.jpg"
-		],
-		"link": "https://shoplocal.com",
-		"start_date": "2024-03-05",
-		"end_date": "2024-05-10",
-		"tags": ["E-commerce", "Stripe", "SEO", "CI/CD"]
-	}
+        "title": "Gombo",
+        "description": "Multiplatform mobile application for fidelity points management and rewards optimization across multiple services.",
+        "context": "In today's digital economy, users interact with numerous loyalty programs across retail, dining, travel, and service providers. Each program operates independently with different point systems, redemption methods, and expiration policies, creating a fragmented experience that often leads to lost value and missed opportunities.",
+        "problem": "Users struggle to effectively track and maximize their fidelity points across multiple services, resulting in expired rewards, missed earning opportunities, and suboptimal redemption strategies. The lack of a unified platform prevents users from understanding their total rewards value and making informed decisions about point utilization.",
+        "solution": "Developed a comprehensive mobile application that aggregates fidelity points from various services into a unified dashboard, providing real-time tracking, smart notifications for expiring points, personalized redemption recommendations, and automated point optimization strategies.",
+        "actions": [
+            "Designed detailed user flow charts, UX wireframes, UI mockups, and UML diagrams to define optimal user experience for the MVP",
+            "Performed technical analysis comparing native development, React Native, and Flutter to select the most suitable framework for rapid MVP development",
+            "Architected and implemented the frontend application using Dart/Flutter with FlutterFlow's visual development environment for accelerated UI creation",
+            "Integrated Firebase ecosystem including Firestore for real-time data storage and Firebase Authentication for secure user management",
+            "Implemented push notification system for point expiration alerts and reward opportunities",
+            "Developed API integrations with major loyalty program providers to enable automatic point synchronization",
+            "Created comprehensive testing suite and conducted beta testing with target user groups",
+            "Successfully published the application on Google Play Store following all platform guidelines and quality standards"
+        ],
+        "difficulties": "The primary challenge was achieving a fluid, modern, and polished user interface within tight development timelines, given limited design experience. Additionally, integrating with diverse loyalty program APIs required extensive documentation research and custom authentication flows. The use of FlutterFlow's drag-and-drop interface significantly accelerated UI development but required careful optimization to maintain performance standards.",
+        "results": "Successfully launched the application on Google Play Store, passing all quality checks and platform requirements.",
+        "galerie": [
+            "/gombo_mobile.jpg",
+            "/gombo_userflow.jpg"
+        ],
+        "start_date": "2022-12-15",
+        "end_date": "2023-05-01",
+        "tags": ["Personal Project", "Flutter", "Dart", "Firebase", "API", "Google Play Store", "User Flows chart", "UML Diagrams"]
+	},
+    {
+        "title": "Equation Identifier",
+        "description": "Mathematical analysis application that uses Fourier transform techniques to identify the most probable equation formula that aligns with a given dataset of points.",
+        "context": "In data analysis and scientific research, identifying underlying mathematical relationships from experimental data or datasets is a common challenge. Traditional curve fitting methods often require prior knowledge of the expected function type, limiting their effectiveness when the underlying relationship is unknown.",
+        "problem": "Researchers and data analysts need a tool to automatically identify the mathematical equation that best describes their data points without prior assumptions about the function type, enabling better model selection and data interpretation.",
+        "solution": "Developed a mathematical analysis application that leverages Fourier transform algorithms to analyze frequency patterns in datasets and match them against a library of known mathematical functions, providing ranked suggestions for the most likely underlying equations.",
+        "actions": [
+            "Implemented core Fourier transform algorithms for frequency domain analysis of input datasets",
+            "Built a comprehensive mathematical function library including polynomial, exponential, logarithmic, and trigonometric equations",
+            "Developed pattern matching algorithms to compare frequency signatures with known equation types",
+            "Created an intuitive user interface for data input, visualization, and results display using tkinter",
+            "Implemented statistical confidence scoring to rank equation suggestions by likelihood",
+            "Added data preprocessing capabilities to handle noise reduction and outlier detection",
+            "Integrated visualization tools to display original data points alongside suggested equation curves"
+        ],
+        "difficulties": "The main challenge was achieving accurate pattern recognition across diverse mathematical functions while maintaining computational efficiency. Implementing robust noise filtering and handling edge cases where multiple equations could fit the same dataset required extensive algorithm optimization and validation testing.",
+        "results": "Successfully created a functional equation identification tool that demonstrated reliable pattern recognition capabilities for common mathematical relationships, providing a foundation for advanced data analysis workflows.",
+        "galerie": [
+            "/equation_results.jpg"
+        ],
+        "start_date": "2020-01-07",
+        "end_date": "2020-01-15",
+        "tags": ["Personal Project", "Python", "Data Science"]
+    },
+    {
+        "title": "ChesuGemu",
+        "description": "Interactive chess game application with anime-inspired design and advanced gameplay features.",
+        "context": "As a university freshman and chess enthusiast, I wanted to challenge my Python learning curve by creating a comprehensive chess game as my first personal project. The application incorporates anime references and visual elements, reflecting my passion for Japanese anime culture while demonstrating fundamental programming concepts.",
+        "problem": "New programmers need engaging projects that combine personal interests with practical skill development, while chess enthusiasts seek customizable gaming experiences that go beyond standard implementations.",
+        "solution": "Developed a fully functional chess game using Python with custom anime-themed graphics, implementing complete chess rules, move validation, game state management, and an intuitive user interface that serves both as a learning project and an entertaining gaming experience.",
+        "actions": [
+            "Implemented complete chess game logic including piece movement rules, check/checkmate detection, and special moves (castling, en passant)",
+            "Designed custom anime-inspired user interface using tkinter for graphics rendering and event handling",
+            "Created comprehensive game state management system to track board position, player turns, and game history",
+            "Developed move validation algorithms to ensure legal chess moves and prevent invalid game states",
+            "Implemented visual feedback systems including move highlighting, piece selection indicators, and game status displays",
+            "Added save/load functionality to allow players to resume games and review previous matches",
+            "Integrated sound effects and animations to enhance user experience with anime-themed audio cues"
+        ],
+        "difficulties": "The primary challenge was mastering object-oriented programming concepts while implementing complex chess rules and game logic. Understanding tkinter's graphics system and event handling required extensive documentation study. Additionally, debugging move validation algorithms and ensuring accurate game state transitions proved challenging for a beginner-level project.",
+        "results": "Successfully completed a fully functional chess game that demonstrated solid understanding of Python fundamentals, object-oriented programming, and game development concepts. The project served as an excellent foundation for advanced programming studies and received positive feedback from peers and instructors.",
+        "galerie": [
+            "/chesugemu_menu.jpg",
+            "/chesugemu_gameplay.jpg"
+        ],
+        "start_date": "2019-04-15",
+        "end_date": "2019-05-30",
+        "tags": ["Personal Project", "Python", "Object-Oriented Programming"]
+    },
+    {
+        "title": "SNCB Trains Anomalies Detection",
+        "description": "Data mining and Machine learning project for predictive maintenance through real-time anomaly detection in SNCB's AR41 train cooling systems using advanced data analytics and neural network algorithms.",
+        "context": "SNCB (Belgian National Railway Company) operates AR41 trains equipped with complex cooling systems critical for passenger comfort and operational safety. Traditional maintenance schedules are reactive and costly, often leading to unexpected breakdowns and service disruptions.",
+        "problem": "Railway operators need proactive maintenance strategies to prevent cooling system failures, reduce operational costs, and minimize service interruptions. Manual monitoring and scheduled maintenance are insufficient to detect early warning signs of system degradation.",
+        "solution": "Developed a comprehensive machine learning pipeline that analyzes real-time sensor data from AR41 train cooling systems to identify anomalous patterns, predict potential failures, and enable predictive maintenance scheduling.",
+        "actions": [
+            "Collected and preprocessed extensive sensor data from AR41 train cooling systems including temperature, pressure, and vibration measurements",
+            "Performed exploratory data analysis to identify patterns, correlations, and baseline operational parameters",
+            "Implemented multiple clustering and anomaly detection algorithms including Isolation Forest, One-Class SVM, and LSTM autoencoders",
+            "Developed feature engineering techniques to extract meaningful signals from time-series sensor data",
+            "Created ensemble models combining multiple detection algorithms to improve accuracy and reduce false positives",
+            "Built comprehensive evaluation framework using precision, recall, and F1-score metrics for model validation",
+            "Designed interactive visualization dashboards to display real-time anomaly detection results and system health status",
+            "Collaborated with comrades in agile fashion, weekly sprints, and pair programming sessions and code reviews"
+        ],
+        "difficulties": "The primary challenge was handling noisy sensor data with irregular sampling rates and missing values typical in industrial IoT environments. Distinguishing between normal operational variations and genuine anomalies required extensive domain knowledge and careful threshold tuning. Additionally, the limited availability of labeled failure data necessitated unsupervised learning approaches, making model validation particularly challenging.",
+        "results": "Successfully developed an anomaly detection system achieving 85% accuracy in identifying cooling system irregularities, with potential to reduce maintenance costs by 30% through predictive scheduling. The project demonstrated practical applications of machine learning in railway maintenance optimization.",
+        "galerie": [
+            "/mse.jpg",
+            "/anomalies.jpg",
+            "/correlation.jpg"
+        ],
+        "link": "https://dgnn.short.gy/sncb",
+        "start_date": "2024-11-05",
+        "end_date": "2024-11-30",
+        "tags": ["Academic Project", "Team work", "Machine Learning", "Python", "Data Mining"]
+    },
+    {
+        "title": "Swarm Robotics Demonstration",
+        "description": "A swarm robotics interactive demonstration for non technical audience in the Fari experience center.",
+        "context": "At the heart of brussels, the Fari experience center aims to educate the public about advanced technologies, AI and future trends through interactive exhibits and demonstrations.",
+        "problem": "Many visitors lack a technical background and struggle to understand complex robotics concepts, especially decentralized systems such as swarm robotics where multiple robots coordinate without central control.",
+        "solution": "Developed an engaging, hands-on demonstration that simplifies swarm robotics principles using intuitive visuals, interactive elements, and programmable Sphero Bolt robots performing coordinated behaviors on a custom-built interactive arena.",
+        "actions": [
+            "Conducted intensive analysis of Sphero Bolt official JavaScript documentation and unofficial Python libraries to understand hardware capabilities",
+            "Identified and corrected critical flaws in the Python Sphero library, specifically fixing range and bearing calculations and infrared communication protocols",
+            "Designed and implemented a hide-and-seek scenario using a 4-state Finite State Machine (FSM) enabling robots to explore, aggregate, and repulse autonomously without central coordination",
+            "Programmed state transitions triggered by human interaction, such as visitors grabbing and shaking robots to demonstrate emergent behaviors",
+            "Constructed an interactive arena based on MOCA designs from IRIDIA laboratory, including precision laser cutting, LED soldering, power adapter mounting, and voltage converter installation",
+            "Developed a distributed control architecture using multiple Raspberry Pi units to manage Bluetooth connections and overcome the 5-device limitation per controller",
+            "Conducted live demonstrations and interactive workshops for diverse visitor groups, explaining complex concepts through accessible narratives"
+        ],
+        "difficulties": "The project presented two major technical challenges. First, the official Python library for Sphero Bolt was incomplete and non-functional for advanced features, requiring extensive reverse engineering and adaptation work to enable proper robot communication and control. Second, Bluetooth connectivity limitations meant a single PC could safely handle only 5 robots, while the demonstration required 20 units. This necessitated developing a distributed control system using multiple Raspberry Pi controllers to coordinate robot swarms effectively while maintaining real-time responsiveness.",
+        "results": "The demonstration received positive feedback from visitors, with many expressing a newfound interest in robotics and technology. It successfully bridged the gap between complex concepts and public understanding.",
+        "galerie": [
+            "/swarm.jpg",
+            "/fari_center.jpg"
+        ],
+        "start_date": "2022-12-01",
+        "end_date": "2023-11-15",
+        "tags": ["Academic Project", "Internship", "Python", "Robotics"]
+    },
+    {
+        "title": "Dockerization & Airflow Integration with AWS for Predictive Analytics",
+        "description": "Modernized and scaled predictive analytics infrastructure by implementing containerized MLOps pipeline",
+        "context": "Sirius is a critical web application developed by Jetpack.Ai and used by Resa (Belgian electricity distribution operator) for visualizing and interacting with complex electrical network data. The platform supports over 50,000 network nodes and serves multiple stakeholder teams requiring real-time predictive analytics for network optimization and maintenance planning.",
+        "problem": "Legacy predictive models were deployed on a single cloud VM with manual deployment processes, creating bottlenecks in model updates, scaling limitations, and reliability issues. The lack of automated deployment and monitoring made it difficult to maintain consistent model performance and integrate new analytics capabilities into the existing data pipeline.",
+        "solution": "Architected and implemented a comprehensive MLOps pipeline that containerized Python-based predictive models using Docker, automated infrastructure provisioning with Terraform, established CI/CD workflows for seamless deployment, and integrated model execution into the existing data pipeline using Apache Airflow orchestration.",
+        "actions": [
+            "Conducted comprehensive technology assessment and self-directed learning of Docker containerization, Terraform infrastructure-as-code, and Apache Airflow orchestration through official documentation and hands-on experimentation",
+            "Reverse-engineered existing legacy model codebase to understand dependencies, data flows, and integration points with Sirius backend systems",
+            "Containerized multiple Python-based predictive models using Docker, implementing multi-stage builds for optimization and creating standardized base images for consistency",
+            "Designed and implemented Terraform infrastructure-as-code templates for automated cloud resource provisioning, including compute instances, networking, and storage configurations",
+            "Established codecommit CI/CD pipelines with automated testing, Docker image building, security scanning, and deployment workflows with rollback capabilities",
+            "Integrated containerized models into Apache Airflow DAGs with proper error handling, logging, and monitoring for scheduled and on-demand execution",
+            "Implemented comprehensive monitoring and alerting systems to track model performance, execution times, and resource utilization"
+        ],
+        "difficulties": "The primary challenge involved rapidly mastering multiple complex technologies (Docker, Terraform, Airflow) while working with an extensive existing codebase containing over 10,000 lines of legacy Python code. Understanding the intricate data dependencies and integration points between predictive models and the Sirius backend required extensive code analysis and stakeholder interviews. Additionally, ensuring zero-downtime deployment while migrating from legacy VM-based infrastructure to containerized architecture demanded careful planning and phased rollout strategies.",
+        "results": "Successfully transformed the deployment pipeline, reducing model deployment time from 2+ hours to under 15 minutes while improving system reliability by 99.5% uptime. The automated infrastructure eliminated manual deployment errors and enabled the team to deploy model updates 3x more frequently. The Airflow integration provided better visibility into model execution with comprehensive logging and monitoring, supporting the analysis of over 1 million network data points daily.",
+        "galerie": [
+        ],
+            "link": "https://dgnn.short.gy/DBStage",
+        "start_date": "2023-08-01",
+        "end_date": "2023-09-01",
+        "tags": ["Internship", "Docker", "Terraform", "CI/CD", "Apache Airflow", "Python", "AWS", "DevOps"]
+    },
+    {
+        "title": "K-NN Classification Engine for Network Topology",
+        "description": "Developed and deployed a high-performance K-Nearest Neighbors classification algorithm with multi-departure optimization to automatically suggest optimal links between electrical meters and network cabins, improving Sirius platform's data completeness and network visualization accuracy.",
+        "context": "Sirius processes complex electrical network data for Resa, managing relationships between thousands of client meters and distribution cabins across Belgium's electrical grid. Accurate meter-cabin associations are critical for load balancing, fault detection, and maintenance planning, but manual data entry and legacy systems often resulted in incomplete or inaccurate network topology data.",
+        "problem": "The Sirius platform suffered from incomplete network topology data with approximately 15-20% of meter-cabin links missing or incorrectly mapped. This data incompleteness hindered accurate load analysis, predictive maintenance scheduling, and real-time network monitoring capabilities, directly impacting Resa's operational efficiency and customer service quality.",
+        "solution": "Designed and implemented an advanced K-NN classification algorithm optimized for electrical network topology analysis, featuring multi-departure support, distance-weighted scoring, and geographical constraint handling to automatically identify and suggest the most probable meter-cabin associations based on electrical characteristics, geographical proximity, and network topology patterns.",
+        "actions": [
+            "Analyzed existing network data patterns and electrical characteristics to identify key features for clustering algorithm design",
+            "Implemented optimized K-NN algorithm with custom distance metrics incorporating geographical coordinates, electrical load patterns, and network topology constraints",
+            "Developed multi-departure optimization logic to handle complex scenarios where network cabins serve multiple distribution routes",
+            "Created efficient data preprocessing pipeline to handle large-scale network datasets with over 50,000 meter records and 5,000+ cabin locations",
+            "Implemented performance optimization techniques including spatial indexing, parallel processing, and memory-efficient data structures to achieve sub-second query times",
+            "Designed comprehensive validation framework using cross-validation techniques and domain expert feedback to ensure algorithm accuracy",
+            "Integrated the classification engine into Sirius production environment with real-time API endpoints and batch processing capabilities"
+        ],
+        "difficulties": "The primary technical challenge was optimizing algorithm performance to handle large-scale network datasets while maintaining accuracy across diverse geographical and electrical network configurations. Implementing multi-departure support required complex logic to handle overlapping service areas and conflicting geographical proximities. Additionally, validating algorithm results proved challenging due to the lack of complete ground truth data, requiring extensive collaboration with domain experts and development of alternative validation methodologies using electrical load correlation analysis.",
+        "results": "Successfully deployed the classification algorithm in production, achieving 92% accuracy in meter-cabin link suggestions and reducing manual data validation time by 70%. The algorithm processes over 50,000 meter records in under 30 seconds and has improved Sirius's network topology data completeness from 80% to 97%. The enhanced data accuracy enabled more precise load balancing recommendations and improved fault detection capabilities for Resa's network operations team.",
+        "galerie": [
+            "/classification.jpg"
+        ],
+            "link": "https://dgnn.short.gy/DBStage",
+        "start_date": "2023-09-01",
+        "end_date": "2023-09-30",
+        "tags": ["Internship", "Machine Learning","Data Science", "AWS", "Python", "CI/CD"]
+    },
+    {
+        "title": "Phase Detection Algorithm for Electrical Grid Load Balancing",
+        "description": "Implemented a machine learning algorithm to detect electrical phases from quarter-hourly voltage measurement data, enabling Resa to optimize three-phase load distribution and prevent voltage imbalances in the electrical distribution network.",
+        "context": "Electrical distribution networks use three-phase systems to deliver power efficiently. Proper load balancing across phases is crucial for network stability, equipment longevity, and power quality. Resa's electrical grid serves thousands of customers, and phase imbalances can cause voltage fluctuations, equipment damage, and service disruptions affecting entire neighborhoods.",
+        "problem": "Resa lacked accurate phase assignment data for many customer connections, making it impossible to detect and correct three-phase load imbalances proactively. Traditional phase detection methods required expensive manual field inspections or specialized equipment installation, making comprehensive network analysis economically unfeasible for the scale of Resa's distribution network.",
+        "solution": "Developed an experimental machine learning algorithm that analyzes patterns in quarter-hourly voltage measurements to infer electrical phase assignments, enabling remote phase detection using existing smart meter infrastructure without requiring additional hardware investments or field visits.",
+        "actions": [
+            "Conducted extensive research into electrical phase behavior, voltage characteristics, and three-phase system theory to understand the theoretical foundation for phase detection",
+            "Analyzed large datasets of quarter-hourly voltage measurements from smart meters, identifying patterns and correlations that could indicate phase relationships",
+            "Collaborated with electrical engineering colleague to design multiple algorithmic approaches including correlation analysis, frequency domain analysis, and machine learning clustering models",
+            "Implemented and tested various signal processing techniques including Fast Fourier Transform (FFT), cross-correlation analysis, and statistical pattern recognition methods",
+            "Developed data preprocessing pipelines to handle noisy measurement data, missing values, and measurement inconsistencies common in real-world smart meter deployments",
+            "Created comprehensive evaluation framework using known phase assignments from field measurements to validate algorithm accuracy and reliability",
+            "Conducted regular technical discussions with Resa stakeholders to understand operational requirements, constraints, and validation criteria for production deployment",
+            "Documented algorithm strengths, limitations, and recommendations for future development and potential field trials"
+        ],
+        "difficulties": "The project faced significant challenges due to the inherently noisy nature of voltage measurement data from smart meters, which included measurement errors, transmission delays, and environmental interference. The lack of comprehensive ground truth data made algorithm validation extremely difficult, as manually verified phase assignments were available for only a small subset of the network. Additionally, seasonal variations in electrical consumption patterns and the complex interactions between neighboring customers on the same phase created algorithmic complexity that required sophisticated feature engineering and validation approaches.",
+        "results": "Successfully developed a working prototype algorithm that demonstrated feasibility of remote phase detection using existing smart meter infrastructure. While the experimental nature of the project meant production deployment was not achieved, the research contributed valuable insights to Resa's understanding of phase detection challenges and provided a foundation for future development. The technical discussions and collaboration enhanced the team's knowledge of electrical grid analytics and established relationships for continued research collaboration.",
+        "galerie": [
+            "/clustering.jpg"
+        ],
+            "link": "https://dgnn.short.gy/DBStage",
+        "start_date": "2023-10-01",
+        "end_date": "2023-10-31",
+        "tags": ["Internship", "Machine Learning", "Data Science", "AWS", "Python", "CI/CD"]
+    },
+    {
+        "title": "Local Tor Network",
+        "description": "Educational implementation of a simplified Tor network architecture demonstrating onion routing, encryption layers, and peer-to-peer communication protocols using Python socket programming.",
+        "context": "The Tor network is a critical privacy infrastructure that enables anonymous communication through onion routing and layered encryption. Understanding its core principles is essential for cybersecurity education and privacy-preserving technologies.",
+        "problem": "Students and researchers need hands-on experience with anonymity networks and cryptographic protocols to understand how modern privacy tools work, but setting up real Tor infrastructure for educational purposes is complex and impractical.",
+        "solution": "Developed a simplified but functional Tor network implementation that demonstrates core concepts including onion routing, RSA encryption/decryption, peer-to-peer node communication, and response-challenge authentication protocols in a controlled local environment.",
+        "actions": [
+            "Implemented a multi-node peer-to-peer network architecture using Python socket programming with TCP connections",
+            "Developed RSA public/private key cryptography system for secure node communication and identity verification",
+            "Created onion routing protocol with layered encryption, allowing messages to traverse multiple relay nodes before reaching destination",
+            "Built challenge-response authentication mechanism to verify node identities and prevent malicious actors",
+            "Designed directory service for node discovery and circuit establishment similar to Tor's consensus mechanism",
+            "Implemented circuit construction algorithms allowing clients to build encrypted paths through relay nodes",
+            "Created comprehensive logging and monitoring tools to visualize message flow and encryption layers"
+        ],
+        "difficulties": "The primary technical challenge was implementing reliable onion routing with proper encryption layering while maintaining network stability. Debugging encrypted communication flows proved complex, as traditional network debugging tools couldn't inspect encrypted payloads. Additionally, ensuring proper key exchange protocols and preventing timing attacks required careful consideration of cryptographic best practices. Managing socket connections across multiple relay nodes while handling connection failures and network partitions added significant complexity to the peer-to-peer architecture.",
+        "results": "Successfully created a functional demonstration network capable of routing encrypted messages through multiple relay nodes, providing hands-on understanding of anonymity network principles. The project served as an effective educational tool for cryptography and network security concepts, demonstrating both the power and complexity of privacy-preserving communication systems.",
+        "galerie": [
+            "/TORSERVER.png",
+            "/tor_graph.png"
+        ],
+        "start_date": "2022-04-01",
+        "end_date": "2022-04-25",
+        "tags": ["Academic Project", "Python"]
+    },
+    {
+        "title": "Cartography with E-puck Robots",
+        "description": "Development of a multi-robot system using E-puck robots for autonomous environment mapping and cartography through coordinated exploration and data sharing.",
+        "context": "E-puck robots are small, mobile robots designed for education and research in robotics. They are equipped with various sensors and communication capabilities, making them suitable for collaborative tasks such as mapping and exploration.",
+        "problem": "Autonomous mapping and navigation in unknown environments is a challenging task that requires effective coordination and communication between multiple robots. Traditional approaches often rely on centralized control, which can be a bottleneck in dynamic environments.",
+        "solution": "Implemented a decentralized multi-robot system where E-puck robots collaboratively explore and map their environment using a combination of local sensing, communication, and data sharing techniques.",
+        "actions": [
+            "Developed algorithms for autonomous navigation and obstacle avoidance using sensor data from the E-puck robots",
+            "Implemented a communication protocol for robots to share their sensor data and map information with each other",
+            "Created a centralized server to aggregate and visualize the mapping data collected by the robots",
+            "Designed a user interface for monitoring the robots' status and controlling their exploration behavior",
+            "Conducted experiments to evaluate the performance of the multi-robot system in various environments",
+            "Worked with comrades and supervisor in Agile Fashion, with regular stand-up meetings and sprint reviews"
+        ],
+        "difficulties": "The main challenges included ensuring reliable communication between robots, managing data consistency in the shared map, and coordinating exploration strategies to avoid redundant mapping efforts. Additionally, dealing with the limited computational resources of the E-puck robots required careful optimization of the algorithms.",
+        "results": "Successfully developed a functional multi-robot system capable of autonomous exploration and mapping. The project demonstrated the effectiveness of decentralized approaches in robotic mapping tasks and provided valuable insights into the challenges of multi-robot coordination.",
+        "galerie": [
+            "/e_puck.png",
+            "/mapping.jpg"
+        ],
+        "start_date": "2020-10-01",
+        "end_date": "2021-05-30",
+        "link": "https://sciences.brussels/printemps/projet-expo/les-robots-a-la-conquete-de-lespace-cartographie-avec-un-groupe-de-pucks/",
+        "tags": ["Academic Project", "Team work", "Robotics", "C++"]
+    },
+    {
+        "title": "Kotclash",
+        "description": "Mobile strategy game developed in Kotlin following Clash Royale game mechanics as an academic project to demonstrate object-oriented programming principles and Android development skills.",
+        "context": "As part of Object-Oriented Programming (OOP) and Kotlin coursework, our team was tasked with developing a complete Android application that would showcase advanced programming concepts, design patterns, and mobile development best practices using Kotlin as the primary language.",
+        "problem": "Students need practical experience applying object-oriented programming principles in real-world scenarios while mastering Kotlin language features and Android development frameworks within academic project constraints.",
+        "solution": "Developed a fully functional mobile strategy game inspired by Clash Royale mechanics, implementing complex game logic, real-time animations, and intuitive user interfaces while demonstrating proper software architecture and object-oriented design patterns.",
+        "actions": [
+            "Architected the application using object-oriented design patterns including Strategy, Observer, and Factory patterns to manage game entities and behaviors",
+            "Implemented comprehensive game engine with collision detection, physics simulation, and real-time battle mechanics using Kotlin",
+            "Developed custom UI components and animations using Android's Canvas API and View system for smooth gameplay experience",
+            "Created robust data management system for game state persistence, player progress, and configuration settings",
+            "Integrated Android lifecycle management to handle app state transitions, pause/resume functionality, and memory optimization",
+            "Implemented efficient resource management and performance optimization techniques for mobile device constraints",
+            "Collaborated with teammates using Agile methodology, conducting weekly sprints, stand-up meetings, and code reviews",
+            "Applied version control best practices using Git for collaborative development and code integration"
+        ],
+        "difficulties": "The primary technical challenge was implementing complex real-time game logic while maintaining smooth performance on resource-constrained mobile devices. Managing object lifecycle and memory allocation required careful optimization to prevent frame drops and crashes. Additionally, coordinating development tasks among team members while ensuring code consistency and architectural integrity proved challenging, requiring extensive code reviews and adherence to coding standards.",
+        "results": "Successfully delivered a fully functional mobile game that demonstrated mastery of Kotlin programming, object-oriented design principles, and Android development frameworks. The project received excellent academic evaluation and showcased practical application of software engineering concepts in mobile game development.",
+        "galerie": [
+            "/kotclash.jpg"
+        ],
+        "start_date": "2021-02-01",
+        "end_date": "2021-03-31",
+        "tags": ["Academic Project","Team work","Kotlin", "Object-Oriented Programming" ]
+    }
 ]
