@@ -12,8 +12,8 @@ export default function LandingPage() {
     <main className="min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden">
       <HeroSection />
       <ProjectsSection />
-      <SkillsSection />
       <CertificationsSection />
+      <SkillsSection />
       <TestimoniesSection />
       <ContactSection />
     </main>
