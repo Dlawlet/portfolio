@@ -20,8 +20,14 @@ export default function HeroSection() {
             Florian Noussa Yao
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">
-            [Junior] Software Engineer & Data/ML Enthusiast
+            Software Engineer & Data/DevOps/ML Enthusiast
           </p>
+          <p className="text-xl md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            I’m Florian, a Junior Engineer passionate about software, data, and
+            DevOps. I build scalable pipelines, smart applications, and modern
+            web solutions that bridge data, AI, and user experience.
+          </p>
+
           <div className="flex flex-wrap justify-center gap-4 text-sm">
             <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full border border-blue-200">
               Continuous Learner

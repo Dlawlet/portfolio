@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 import ContactSection from "./components/ContactSection";
 import CertificationsSection from "./components/CertificationsSection";
+import TestimoniesSection from "./components/TestimoniesSection";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <ProjectsSection />
       <SkillsSection />
       <CertificationsSection />
+      <TestimoniesSection />
       <ContactSection />
     </main>
   );

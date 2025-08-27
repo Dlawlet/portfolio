@@ -7,6 +7,8 @@ const certifications = [
     name: "AWS Academy Graduate - Microservices and Ci/CD Pipeline Builder & Cloud Foundations",
     provider: "AWS Cloud academy",
     status: "Completed",
+    badge: "/awsbadge.png",
+    link: "https://www.credly.com/badges/dfb94648-5105-4440-a55b-6c56ebc12307/public_url",
   },
   {
     name: "Microsoft Certified: Power BI Data Analyst Associate",
@@ -46,8 +48,23 @@ export default function CertificationsSection() {
               <h3 className="text-xl font-semibold text-gray-900">
                 {item.name}
               </h3>
-              <p className="text-gray-600">Provider: {item.provider}</p>
-              <p className="text-gray-600">Status: {item.status}</p>
+              <div className="flex col">
+                <div className="flex-grow">
+                  <p className="text-gray-600">Provider: {item.provider}</p>
+                  <p className="text-gray-600">Status: {item.status}</p>
+                </div>
+                <div className="w-24 flex justify-end">
+                  {item.badge && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={item.badge} alt="" onError={() => {}} />
+                    </a>
+                  )}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

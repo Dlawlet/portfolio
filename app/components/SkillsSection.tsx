@@ -3,46 +3,46 @@
 import { motion } from "framer-motion";
 
 const skills_softwareDev = [
-  { skill: "Java", level: 40 },
-  { skill: "JavaScript", level: 50 },
-  { skill: "C++", level: 40 },
-  { skill: "Kotlin", level: 50 },
+  { skill: "Java", level: 40, exp: "Familiar" },
+  { skill: "JavaScript", level: 50, exp: "Familiar" },
+  { skill: "C++", level: 40, exp: "Familiar" },
+  { skill: "Kotlin", level: 50, exp: "Familiar" },
 ];
 const skills_dataML = [
-  { skill: "Python", level: 85 },
-  { skill: "Pandas", level: 85 },
-  { skill: "NumPy", level: 90 },
-  { skill: "Scikit-Learn", level: 80 },
-  { skill: "Matplotlib", level: 80 },
-  { skill: "Seaborn", level: 75 },
-  { skill: "SQL", level: 70 },
-  { skill: "NoSQL", level: 65 },
-  { skill: "Data Visualization", level: 75 },
-  { skill: "Data Cleaning", level: 80 },
-  { skill: "Data Analysis", level: 80 },
-  { skill: "TensorFlow", level: 70 },
-  { skill: "Machine Learning", level: 75 },
+  { skill: "Python", level: 85, exp: "Expert" },
+  { skill: "Pandas", level: 85, exp: "Expert" },
+  { skill: "NumPy", level: 90, exp: "Expert" },
+  { skill: "Scikit-Learn", level: 80, exp: "Expert" },
+  { skill: "Matplotlib", level: 80, exp: "Expert" },
+  { skill: "Seaborn", level: 75, exp: "Expert" },
+  { skill: "SQL", level: 70, exp: "Proficient" },
+  { skill: "NoSQL", level: 65, exp: "Proficient" },
+  { skill: "Data Visualization", level: 75, exp: "Proficient" },
+  { skill: "Data Cleaning", level: 80, exp: "Expert" },
+  { skill: "Data Analysis", level: 80, exp: "Expert" },
+  { skill: "TensorFlow", level: 70, exp: "Proficient" },
+  { skill: "Machine Learning", level: 75, exp: "Proficient" },
 ];
 
 const skills_DevOps = [
-  { skill: "Docker", level: 75 },
-  { skill: "CI/CD", level: 75 },
-  { skill: "AWS", level: 65 },
-  { skill: "Linux", level: 80 },
-  { skill: "Airflow", level: 75 },
-  { skill: "Terraform", level: 70 },
-  { skill: "PostgreSQL", level: 70 },
-  { skill: "MongoDB", level: 65 },
+  { skill: "Docker", level: 75, exp: "Proficient" },
+  { skill: "CI/CD", level: 75, exp: "Proficient" },
+  { skill: "AWS", level: 65, exp: "Proficient" },
+  { skill: "Linux", level: 80, exp: "Proficient" },
+  { skill: "Airflow", level: 75, exp: "Proficient" },
+  { skill: "Terraform", level: 70, exp: "Proficient" },
+  { skill: "PostgreSQL", level: 70, exp: "Proficient" },
+  { skill: "MongoDB", level: 65, exp: "Proficient" },
 ];
 
 const skills_WebDev = [
-  { skill: "HTML", level: 95 },
-  { skill: "CSS", level: 90 },
-  { skill: "JavaScript", level: 50 },
-  { skill: "React", level: 50 },
-  { skill: "Next.js", level: 50 },
-  { skill: "Responsive Design", level: 65 },
-  { skill: "TypeScript", level: 50 },
+  { skill: "HTML", level: 95, exp: "Proficient" },
+  { skill: "CSS", level: 90, exp: "Proficient" },
+  { skill: "JavaScript", level: 50, exp: "Familiar" },
+  { skill: "React", level: 50, exp: "Familiar" },
+  { skill: "Next.js", level: 50, exp: "Familiar" },
+  { skill: "Responsive Design", level: 65, exp: "Proficient" },
+  { skill: "TypeScript", level: 50, exp: "Familiar" },
 ];
 
 const Annex = [
@@ -86,7 +86,7 @@ export default function SkillsSection() {
             >
               <div className="flex justify-between text-sm text-gray-700">
                 <span>{item.skill}</span>
-                <span>{item.level}%</span>
+                <span>{item.exp}</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
@@ -117,7 +117,7 @@ export default function SkillsSection() {
             >
               <div className="flex justify-between text-sm text-gray-700">
                 <span>{item.skill}</span>
-                <span>{item.level}%</span>
+                <span>{item.exp}</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
@@ -146,7 +146,7 @@ export default function SkillsSection() {
             >
               <div className="flex justify-between text-sm text-gray-700">
                 <span>{item.skill}</span>
-                <span>{item.level}%</span>
+                <span>{item.exp}</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
@@ -175,7 +175,7 @@ export default function SkillsSection() {
             >
               <div className="flex justify-between text-sm text-gray-700">
                 <span>{item.skill}</span>
-                <span>{item.level}%</span>
+                <span>{item.exp}</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                 <motion.div
