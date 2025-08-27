@@ -25,7 +25,7 @@ export default function TestimoniesSection() {
               className="space-y-2"
             >
               <p className="text-gray-800 italic font-sans text-center max-w-4xl">
-                "{item.text}"
+                &quot;{item.text}&quot;
               </p>
               <div className="flex items-center justify-end">
                 <p className="text-gray-600">{item.Author} </p>

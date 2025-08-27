@@ -60,7 +60,7 @@ export default function CertificationsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img src={item.badge} alt="" onError={() => {}} />
+                      <img src={item.badge} onError={() => {}} />
                     </a>
                   )}
                 </div>
