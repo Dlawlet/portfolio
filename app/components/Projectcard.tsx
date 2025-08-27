@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -32,6 +32,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [imgSrc, setImgSrc] = useState<string>(
     project.galerie[0] || "/code.jpg"
   );
+  // Update image source when project changes (fixes stale image after filtering)
+  useEffect(() => {
+    setImgSrc(project.galerie?.[0] || "/code.jpg");
+  }, [project.galerie]);
   return (
     <button
       type="button"

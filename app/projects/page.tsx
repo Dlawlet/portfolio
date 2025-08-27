@@ -112,7 +112,7 @@ export default function ProjectsPage() {
             </div>
           ) : (
             filteredProjects.map((project, index) => (
-              <div key={index} className="flex justify-center">
+              <div key={project.title + String(index)} className="flex justify-center">
                 <ProjectCard
                   project={project}
                   onClick={() => setSelectedProject(project)}
