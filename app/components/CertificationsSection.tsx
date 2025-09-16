@@ -12,7 +12,7 @@ const certifications = [
   },
   {
     name: "Microsoft Certified: Power BI Data Analyst Associate",
-    provider: "AWS Cloud academy",
+    provider: "Microsoft",
     status: "Ongoing",
   },
   {
